@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'blog_index' %}
+
+{% block main %}
+    {% for project in projects %}
+        <article class="post">
+            <h2>
+                <a href="{{ project.url }}" target="_blank">
+
+                     {{ project.title }}
+                </a>
+            </h2>
+        </article>
+    {% else %}
+        <div class="well"> project.no_posts_found|trans </div>
+    {% endfor %}
+
+ 
+{% endblock %}
+
+{% block sidebar %}
+
+
+{% endblock %}
