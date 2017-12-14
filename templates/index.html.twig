@@ -2,6 +2,11 @@
 
 {% block body_id 'blog_index' %}
 
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/js/app.js') }}"></script>
+{% endblock %}
+
 {% block main %}
     {% for project in projects %}
         <article class="post">
@@ -16,6 +21,7 @@
         <div class="well"> project.no_posts_found|trans </div>
     {% endfor %}
 
+    0 down time deploy
  
 {% endblock %}
 
